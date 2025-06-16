@@ -1,0 +1,112 @@
+/* Reset margins, padding and set font & background for the entire app */
+body, html, #root {
+  margin: 0; padding: 0; height: 100%;
+  font-family: 'Poppins', sans-serif; /* Futuristic, clean sans-serif font */
+  background: white; /* Clean white background for simplicity */
+  color: #222; /* Dark text for readability */
+}
+
+/* Container that centers content vertically and horizontally */
+.app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Splash screen styling: full screen white with centered content */
+.splash-screen {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glowing logo text style - futuristic glow effect */
+.logo-glow {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #00bcd4; /* Bright cyan/teal color for modern vibe */
+  text-shadow:
+    0 0 5px #00bcd4,
+    0 0 10px #00bcd4,
+    0 0 20px #00e5ff,
+    0 0 30px #00e5ff,
+    0 0 40px #00e5ff,
+    0 0 55px #00e5ff;
+  animation: glowPulse 2s ease-in-out infinite alternate; /* Pulsing glow animation */
+}
+
+/* Animation to smoothly pulse the glow effect */
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 5px #00bcd4,
+      0 0 10px #00bcd4,
+      0 0 20px #00e5ff,
+      0 0 30px #00e5ff,
+      0 0 40px #00e5ff,
+      0 0 55px #00e5ff;
+  }
+  to {
+    text-shadow:
+      0 0 10px #00bcd4,
+      0 0 15px #00bcd4,
+      0 0 25px #00e5ff,
+      0 0 40px #00e5ff,
+      0 0 60px #00e5ff,
+      0 0 80px #00e5ff;
+  }
+}
+
+/* Home page container, max width to keep layout tidy */
+.home-page {
+  width: 90vw;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Header text style with accent color */
+.home-page h1 {
+  margin-bottom: 2rem;
+  color: #00796b; /* Dark teal */
+}
+
+/* Grid layout for feature cards: responsive columns with gap */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Each feature card styling: light background, rounded corners, padding */
+.feature-card {
+  background: #e0f2f1; /* Light teal background for calm look */
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer; /* Indicates clickable */
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Slight scale up and stronger shadow on hover for interactivity */
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Icon style: large size and teal color to match theme */
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #004d40; /* Darker teal */
+}
+
+/* Label text style: semi-bold, readable size */
+.feature-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #004d40;
+}
